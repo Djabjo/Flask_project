@@ -12,7 +12,7 @@
   <br clear=all>
   <div class="nav" style="float:right;">
     <button type="button" class="btn btn-outline-primary me-2">Регистрация</button>
-    <button type="button" class="btn btn-primary">Войти</button>
+    <li><a href="{{ url_for('logins') }}" class="nav-link px-3">Войти</a></li>
   </div>
   <div class="col-md-3 mb-2 mb-md-0">
     <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
@@ -28,7 +28,7 @@
 </header>
 <main clas="content"> 
 
-  {% block content %}{% endblock %}
+{% block content %}{% endblock %}
 </main>
 <footer class="footer">
   <dev class="col-md-4 d-flex align-items-center">

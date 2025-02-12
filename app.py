@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
-
+from login_and_registr import login
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydb.db'
@@ -45,6 +45,13 @@ def create():
 @app.route("/about_project")
 def about_project():
     return render_template("about_project.html")
+
+
+
+@app.route("/logins", methods=["POST", "GET"])
+def logins():
+    return login()
+
 
 if __name__ == '__main__':
     app.run(debug=True)
